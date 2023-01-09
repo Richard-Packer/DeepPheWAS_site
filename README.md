@@ -1,5 +1,6 @@
 # just-the-docs-template
 
+DeepPheWAS is an R package for running Phenome wide association studies (PheWAS).
 This is a *bare-minimum* template to create a [Jekyll] site that:
 
 - uses the [Just the Docs] theme;
