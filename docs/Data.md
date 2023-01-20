@@ -14,7 +14,7 @@ nav_order: 2
 </details>
 
 
-DeepPheWAS is optimised for UK Biobank data, and assuming all required fields are present will make all phenotypes natively available with the package. DeepPheWAS can work with other data sources particularly other sources of health care records but requires some editing of the data that is not required when using UK Biobank data.
+DeepPheWAS is optimised for UK Biobank data, and assuming all required fields are present will make all phenotypes available with the package. DeepPheWAS can work with other data sources particularly other sources of health care records but requires some editing of the data that is not required when using UK Biobank data.
 
 Currently DeepPheWAS only works with downloaded data files and not the research access portal (RAP) from UK Biobank, work is under way to convert the package for use in the RAP.
 
@@ -28,7 +28,11 @@ For those unfamiliar with [UK Biobank], data is accessed by application to be an
 * **22001** - genetic sex
 * **22005** - missingness
 
-Having only these fields will not create any phenotypes but allows the addition of date and sex data when creating phenotypes which is essential for DeepPheWAS to work. A full list of field IDs that are used by the package and accessed in this way is stored as a plain text file within the downloaded package. Find this file in the installed package `R_x/DeepPheWAS/extdata/fields_minimum.txt.gz`. The majority of these data fields will provide data for a single phenotype the most frequently used field IDs are.
+Having only these fields will not create any phenotypes but allows the addition of date and sex data when creating phenotypes, which is essential for DeepPheWAS to work. A full list of field IDs that are used by the package and accessed in this way is stored as a plain text file within the downloaded package. Find this file in the installed package. 
+```bash 
+R_x/DeepPheWAS/extdata/fields_minimum.txt.gz
+```
+The majority of these data fields will provide data for a single phenotype the most frequently used field IDs are.
 
 * **20002** - Self-reported non-cancer diagnosis
 * **20008** - Year of self-reported non-cancer diagnosis
@@ -37,7 +41,7 @@ Having only these fields will not create any phenotypes but allows the addition 
 * **40006** - Cancer diagnosis (cancer registry)
 * **40005** - Date of cancer diagnosis
 
-In addition to the data described above some linked health care data is provided as separate files available via the **"data portal"**, field IDs listed below alongside the name inputted in the data portal to retrieve the data file:
+In addition to the data described above the majority of linked health care data is provided as separate files available via the **"data portal"**, field IDs listed below alongside the name inputted in the data portal to retrieve the data file:
 * **42040** - GP clinical event records (gp_clinical)
 * **42039** - GP prescription records (gp_scripts)
 * **41259** - Records in HES inpatient main dataset (HESIN)
@@ -46,12 +50,12 @@ In addition to the data described above some linked health care data is provided
 * **40023** - Death cause clinical codes (death_cause)
 * **40023** - Death cause dates (death)
 
-Finally if a user wanted to remove related individuals from association testing they would need to use the [gfetch tool] made available by UK Biobank to downloaded the **rel** file containing information on related pairs
-If a user had only the 
+Finally if a user wanted to remove related individuals from association testing they would need to use the [gfetch tool] made available by UK Biobank to downloaded the **rel** file containing information on related pairs. 
 
 Having the above data and no other additional field IDs would create all phenotypes that rely solely on health data, but miss nearly all quantitative phenotypes and phenotypes that rely on questionnaire data.
 
 ### Non UK Biobank data 
+Guide under development.
 
 
 

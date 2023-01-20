@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Running a PheWAS
+title: PheWAS scripts and examples
 nav_order: 3
 has_children: true
 ---
@@ -17,6 +17,10 @@ To see help and information on each of the scripts use a single argument `-h` fo
 
 `./01_minimum_data.R -h`
 
-Will present the help documentation for the `01_minimum_data.R`. 
+Will present the help documentation for the `01_minimum_data.R`. Near the top of each of the help documentation is a section on `Usage:`
+
+Usage shows the relationship between arguments including which arguments are required. Some scripts will have two or more usage sections which indicate different ways of using the scripts, often dependent on different inputs. The usage section follows the notation of docopt (see [here] for more details). In brief, arguments that are required are surrounded by `()` and optional arguments are surrounded by `[]`. Where only one of several arguments should be used, these are separated by a `|`. For example, `(arg1 | arg2)` would indicate that one of arg1 or arg2 is required but not both.
 
 In the following sections we will go through the standard inputs to the scripts required to generate the phenotypes, prepare the phenotypes for association, run association testing and graph the results. We have provided simulated data in a compatible format to that provided by UK Biobank. All of the scripts using simulated data can be run interactively in a BASH window.
+
+[here]: http://docopt.org/
